@@ -8,102 +8,45 @@
 
 #import "CRBSAppDelegate.h"
 
-#if HAS_POD(CrashlyticsFramework)
+//Frameworks
 #import <Crashlytics/Crashlytics.h>
-#endif
-
-#if HAS_POD(CocoaLumberjack)
-    #if COCOAPODS_VERSION_MAJOR_CocoaLumberjack == 1
-    #import <CocoaLumberjack/DDASLLogger.h>
-    #import <CocoaLumberjack/DDTTYLogger.h>
-    #endif
-
-    #if HAS_POD(CrashlyticsLumberjack)
-    #import <CrashlyticsLumberjack/CrashlyticsLogger.h>
-    #endif
-
-    #if HAS_POD(Sidecar)
-    #import <Sidecar/CRLMethodLogFormatter.h>
-    #endif
-#endif
-
-#if HAS_POD(Aperitif) && IS_ADHOC_BUILD
-#import <Aperitif/CRLAperitif.h>
-#endif
-
 
 @implementation CRBSAppDelegate
 
--(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initializeLoggingAndServices];
-
+    
+    // Override point for customization after application launch.
     return YES;
 }
 
--(void)applicationDidBecomeActive:(UIApplication *)application
-{
-    [self scheduleCheckForUpdates];
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-
-#pragma mark Amaro foundation goodies
-
-/**
- Connects to Crashlytics and sets up CocoaLumberjack
- */
--(void)initializeLoggingAndServices
-{
-    #if HAS_POD(CrashlyticsFramework)
-    NSString *crashlyticsAPIKey = @"((CrashlyticsAPIKey))";
-
-    if([crashlyticsAPIKey characterAtIndex:0] != '(') [Crashlytics startWithAPIKey:crashlyticsAPIKey];
-    else NSLog(@"Set your Crashlytics API key in the app delegate to enable Crashlytics integration!");
-    #endif
-
-    #if HAS_POD(CocoaLumberjack)
-        #if HAS_POD(Sidecar)
-        CRLMethodLogFormatter *logFormatter = [[CRLMethodLogFormatter alloc] init];
-        [[DDASLLogger sharedInstance] setLogFormatter:logFormatter];
-        [[DDTTYLogger sharedInstance] setLogFormatter:logFormatter];
-        #endif
-
-        // Emulate NSLog behavior for DDLog*
-        [DDLog addLogger:[DDASLLogger sharedInstance]];
-        [DDLog addLogger:[DDTTYLogger sharedInstance]];
-
-        // Send warning & error messages to Crashlytics
-        #if HAS_POD(CrashlyticsLumberjack)
-            #if HAS_POD(Sidecar)
-            [[CrashlyticsLogger sharedInstance] setLogFormatter:logFormatter];
-            #endif
-
-            [DDLog addLogger:[CrashlyticsLogger sharedInstance] withLogLevel:LOG_LEVEL_INFO];
-       #endif
-    #endif
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-/**
- Schedules a check for updates to the app in the Installr API. Only executed for Ad Hoc builds,
- not targetting the simulator (i.e. archives of the -Staging and -Production schemes).
- */
--(void)scheduleCheckForUpdates
-{
-    // Uncomment the blob below and fill in your Installr app tokens to enable automatically
-    // prompting the user when a new build of your app is pushed.
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+}
 
-    #if HAS_POD(Aperitif) && IS_ADHOC_BUILD && !TARGET_IPHONE_SIMULATOR && !defined(DEBUG)
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+}
 
-//    #ifdef TARGETING_STAGING
-//    NSString * const installrAppToken = @"<Installr app token for the staging build of your app>";
-//    #else
-//    NSString * const installrAppToken = @"<Installr app token for the production build of your app>";
-//    #endif
-//
-//    [CRLAperitif sharedInstance].appToken = installrAppToken;
-//    [[CRLAperitif sharedInstance] checkAfterDelay:3.0];
+- (void)applicationWillTerminate:(UIApplication *)application {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
 
-    #endif
+#pragma mark -
+#pragma mark Private
+
+- (void)initializeLoggingAndServices {
+    [Crashlytics startWithAPIKey:CRBSFabricAPIKey];
 }
 
 @end

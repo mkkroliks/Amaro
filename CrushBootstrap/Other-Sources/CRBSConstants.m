@@ -18,6 +18,8 @@
 
 // The values here are just examples.
 
+NSString * const CRBSFabricAPIKey = @"";
+
 #ifdef TARGETING_STAGING
 
 //NSString * const CRBSAPIKey = @"StagingKey";

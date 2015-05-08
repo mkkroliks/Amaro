@@ -14,3 +14,5 @@
 // For example:
 //extern NSString * const CRBSAPIKey;
 //extern NSURL * const CRBSAPIRoot;
+
+extern NSString * const CRBSFabricAPIKey;
