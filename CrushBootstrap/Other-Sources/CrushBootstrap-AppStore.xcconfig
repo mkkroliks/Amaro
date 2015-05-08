@@ -2,4 +2,4 @@
 
 #include "../../External/xcconfigs/iOS/iOS-Application.xcconfig"
 #include "../../External/xcconfigs/Base/Configurations/Release.xcconfig"
-#include "CrushBootstrap-Release.xcconfig"
+#include "CrushBootstrap.xcconfig"

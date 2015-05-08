@@ -51,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		12CC9EC171F3BB2114E66841 /* Pods-Specs.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_staging.xcconfig"; sourceTree = "<group>"; };
+		209436D11AFCBF94004FC6DB /* CrushBootstrap-AppStore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "CrushBootstrap-AppStore.xcconfig"; sourceTree = "<group>"; };
 		2CB569C4CA54BBB2A8A3438F /* Pods.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		326C1F0145B5BE66CBCC67F1 /* Pods-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
 		3EA32E3BEF65BE84130D7190 /* Pods.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.profile_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.profile_production.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 				BD574AFF18EA481500EDD66F /* CrushBootstrap-Test.xcconfig */,
 				BD3570BC199293C2006C5409 /* CrushBootstrap-Profile.xcconfig */,
 				BD3570BD19929436006C5409 /* CrushBootstrap-Release.xcconfig */,
+				209436D11AFCBF94004FC6DB /* CrushBootstrap-AppStore.xcconfig */,
 				BD49EA2C18EC842B00F73350 /* CrushBootstrap-Environment.h */,
 				BD574B0218EA481500EDD66F /* Pods-Environment.h */,
 			);
@@ -835,7 +837,7 @@
 		};
 		BDDB998318C3943B003EBC42 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD3570BD19929436006C5409 /* CrushBootstrap-Release.xcconfig */;
+			baseConfigurationReference = 209436D11AFCBF94004FC6DB /* CrushBootstrap-AppStore.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
