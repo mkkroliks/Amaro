@@ -108,7 +108,7 @@ def getBadgeImage(approxIconHeight, staging, versionText):
                                                       badgeSize.height))
 
     textFrameBounds = Foundation.NSIntegralRect(
-                        Foundation.NSMakeRect(borderedIconSize.width,
+                        Foundation.NSMakeRect(borderedIconSize.width, 10.0 + 
                                               (badgeSize.height - Foundation.NSHeight(versionStringBounds)) / 2.0,  # vertically centered
                                               versionStringWidth,
                                               badgeSize.height))
@@ -197,7 +197,7 @@ def badgeFile(fn, destinationDir, isStaging, versionString, buildString):
         fullVersionString += 'v' + versionString
     if buildString:
         if versionString: fullVersionString += '\n'
-        fullVersionString += 'b' + buildString
+        fullVersionString += ' ' + buildString.lower()
 
     # Not using -[NSImage initWithContentsOfFile:] here, since that treats @2x files
     # specially, which we don't want in this case.
