@@ -1,36 +1,21 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '7.0'
-
-# Crush Utility Belt
-pod 'Sidecar'
-
-# Logging & Analytics
-pod 'CocoaLumberjack', '~> 1.9.0'
-pod 'CrashlyticsFramework'
-pod 'CrashlyticsLumberjack', '~>1.0.0'
+inhibit_all_warnings!
 
 # Networking
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 2.5'
+
+#
+pod 'Fabric/Crashlytics', '~> 1.0'
 
 # Various goodies
-pod 'libextobjc'       # Useful macros and some craziness
-pod 'FormatterKit'     # For all your string formatting needs
-pod 'Asterism'         # Nice & fast collection operations
+#pod 'FormatterKit'     # For all your string formatting needs
+#pod 'NYXImagesKit'
 
 # You may want...
-#pod 'PromiseKit'      # Promises/A+-alike
 #pod 'Mantle'          # Github's model framework
 #pod 'SSKeychain'      # Go-to keychain wrapper
-#pod 'DateTools'       # Datetime heavy lifting
-#pod 'PixateFreestyle' # Style your app with CSS
-#pod 'Masonry'         # Convenient autolayout DSL
-
-# Update checker for Installr (installrapp.com)
-#pod 'Aperitif', :configurations => ['Debug_Staging', 'Debug_Production', 'AdHoc_Staging', 'AdHoc_Production']
-
-# Reveal app view debugger
-pod 'Reveal-iOS-SDK', :configurations => ['Debug_Staging', 'Debug_Production']
 
 # Testing necessities
 target 'Specs', :exclusive => true do
