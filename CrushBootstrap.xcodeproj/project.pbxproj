@@ -15,8 +15,7 @@
 		BD3CA8BC18D8A6D200C993E0 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = BD3CA8BB18D8A6D200C993E0 /* default.css */; };
 		BD3D80F318E8AD9100FAD1EB /* ZZZCodeCoverageFixForiOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3D80F218E8AD9100FAD1EB /* ZZZCodeCoverageFixForiOS7.m */; };
 		BD6951CF18EA4B0800F2F410 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6951CE18EA4B0800F2F410 /* main.m */; };
-		BD6951ED18EA54BB00F2F410 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6951EB18EA54BB00F2F410 /* Main_iPad.storyboard */; };
-		BD6951EE18EA54BB00F2F410 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6951EC18EA54BB00F2F410 /* Main_iPhone.storyboard */; };
+		BD6951EE18EA54BB00F2F410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6951EC18EA54BB00F2F410 /* Main.storyboard */; };
 		BDDB996318C3943B003EBC42 /* CRBSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDB996218C3943B003EBC42 /* CRBSAppDelegate.m */; };
 		BDDB996C18C3943B003EBC42 /* CRBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDB996B18C3943B003EBC42 /* CRBSViewController.m */; };
 		BDDB996E18C3943B003EBC42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDB996D18C3943B003EBC42 /* Images.xcassets */; };
@@ -82,8 +81,7 @@
 		BD574B0218EA481500EDD66F /* Pods-Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-Environment.h"; sourceTree = "<group>"; };
 		BD6951CE18EA4B0800F2F410 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD6951EA18EA54A800F2F410 /* CrushBootstrap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrushBootstrap-Info.plist"; sourceTree = "<group>"; };
-		BD6951EB18EA54BB00F2F410 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		BD6951EC18EA54BB00F2F410 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BD6951EC18EA54BB00F2F410 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BD9FFD9418E66DF4001DF6EC /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		BDD81EE419DB5FCB00E45AC2 /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = "<group>"; };
 		BDDB994F18C3943B003EBC42 /* CrushBootstrap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrushBootstrap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,8 +206,7 @@
 		BDB71B2618EA471400579B97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD6951EB18EA54BB00F2F410 /* Main_iPad.storyboard */,
-				BD6951EC18EA54BB00F2F410 /* Main_iPhone.storyboard */,
+				BD6951EC18EA54BB00F2F410 /* Main.storyboard */,
 				BDDB996A18C3943B003EBC42 /* CRBSViewController.h */,
 				BDDB996B18C3943B003EBC42 /* CRBSViewController.m */,
 			);
@@ -377,8 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDB996E18C3943B003EBC42 /* Images.xcassets in Resources */,
-				BD6951ED18EA54BB00F2F410 /* Main_iPad.storyboard in Resources */,
-				BD6951EE18EA54BB00F2F410 /* Main_iPhone.storyboard in Resources */,
+				BD6951EE18EA54BB00F2F410 /* Main.storyboard in Resources */,
 				BD304C8318E77F7E0034105E /* Settings.bundle in Resources */,
 				BD3CA8BC18D8A6D200C993E0 /* default.css in Resources */,
 			);
@@ -570,6 +566,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug_Production;
 		};
@@ -614,6 +611,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Test_Production;
 		};
@@ -660,6 +658,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = AdHoc_Production;
 		};
@@ -705,6 +704,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Profile_Production;
 		};
@@ -751,6 +751,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = AdHoc_Staging;
 		};
@@ -806,6 +807,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug_Staging;
 		};
@@ -822,6 +824,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Distribution;
 		};
@@ -886,6 +889,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Profile_Staging;
 		};
@@ -930,6 +934,7 @@
 				GCC_PREFIX_HEADER = "CrushBootstrap/Application/CrushBootstrap-Prefix.pch";
 				INFOPLIST_FILE = "CrushBootstrap/Other-Sources/CrushBootstrap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Test_Staging;
 		};
