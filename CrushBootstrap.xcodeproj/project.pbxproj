@@ -10,10 +10,10 @@
 		036A61EAF6146EA59BD29634 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06B515E067379B8477A8245 /* libPods.a */; };
 		074C8AD7A4D403DECEE7F926 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A5F5E57179B0D085AF4FF2 /* libPods-Specs.a */; };
 		209436D41AFCD4F2004FC6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209436D31AFCD4F2004FC6DB /* Main.storyboard */; };
+		209436D71AFCD5E3004FC6DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209436D61AFCD5E3004FC6DB /* LaunchScreen.xib */; };
 		BD304C8118E672EA0034105E /* CRBSDummySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD304C8018E672EA0034105E /* CRBSDummySpec.m */; };
 		BD304C8318E77F7E0034105E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD304C8218E77F7E0034105E /* Settings.bundle */; };
 		BD35136619BE274A00A19841 /* CRBSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35136519BE274A00A19841 /* CRBSConstants.m */; };
-		BD3CA8BC18D8A6D200C993E0 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = BD3CA8BB18D8A6D200C993E0 /* default.css */; };
 		BD3D80F318E8AD9100FAD1EB /* ZZZCodeCoverageFixForiOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3D80F218E8AD9100FAD1EB /* ZZZCodeCoverageFixForiOS7.m */; };
 		BD6951CF18EA4B0800F2F410 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6951CE18EA4B0800F2F410 /* main.m */; };
 		BDDB996318C3943B003EBC42 /* CRBSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDB996218C3943B003EBC42 /* CRBSAppDelegate.m */; };
@@ -50,6 +50,7 @@
 		12CC9EC171F3BB2114E66841 /* Pods-Specs.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_staging.xcconfig"; sourceTree = "<group>"; };
 		209436D11AFCBF94004FC6DB /* CrushBootstrap-AppStore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "CrushBootstrap-AppStore.xcconfig"; sourceTree = "<group>"; };
 		209436D31AFCD4F2004FC6DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		209436D61AFCD5E3004FC6DB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		2CB569C4CA54BBB2A8A3438F /* Pods.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_production.xcconfig"; sourceTree = "<group>"; };
 		326C1F0145B5BE66CBCC67F1 /* Pods-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
 		3EA32E3BEF65BE84130D7190 /* Pods.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.profile_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.profile_production.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		BD3570BB19929359006C5409 /* CrushBootstrap-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "CrushBootstrap-Debug.xcconfig"; sourceTree = "<group>"; };
 		BD3570BC199293C2006C5409 /* CrushBootstrap-Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "CrushBootstrap-Profile.xcconfig"; sourceTree = "<group>"; };
 		BD3570BD19929436006C5409 /* CrushBootstrap-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "CrushBootstrap-Release.xcconfig"; sourceTree = "<group>"; };
-		BD3CA8BB18D8A6D200C993E0 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
 		BD3D80F218E8AD9100FAD1EB /* ZZZCodeCoverageFixForiOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZZCodeCoverageFixForiOS7.m; sourceTree = "<group>"; };
 		BD49EA2C18EC842B00F73350 /* CrushBootstrap-Environment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrushBootstrap-Environment.h"; sourceTree = "<group>"; };
 		BD574AFE18EA481500EDD66F /* CrushBootstrap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CrushBootstrap-Prefix.pch"; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				209436D31AFCD4F2004FC6DB /* Main.storyboard */,
+				209436D61AFCD5E3004FC6DB /* LaunchScreen.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -154,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				BDDB996D18C3943B003EBC42 /* Images.xcassets */,
-				BD3CA8BB18D8A6D200C993E0 /* default.css */,
 				BD304C8218E77F7E0034105E /* Settings.bundle */,
 			);
 			path = Resources;
@@ -382,9 +382,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209436D71AFCD5E3004FC6DB /* LaunchScreen.xib in Resources */,
 				BDDB996E18C3943B003EBC42 /* Images.xcassets in Resources */,
 				BD304C8318E77F7E0034105E /* Settings.bundle in Resources */,
-				BD3CA8BC18D8A6D200C993E0 /* default.css in Resources */,
 				209436D41AFCD4F2004FC6DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
