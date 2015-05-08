@@ -540,12 +540,12 @@ end
 class Bootstrapper
     REPLACEMENT_PREFIX = 'CRBS'
     REPLACEMENT_PROJECT_NAME = 'CrushBootstrap'
-    REPLACEMENT_ORGANIZATION = 'Crush & Lovely'
-    REPLACEMENT_DOMAIN = 'com.crushlovely'
+    REPLACEMENT_ORGANIZATION = 'AppUnite.com'
+    REPLACEMENT_DOMAIN = 'com.appunite'
 
-    BOOTSTRAP_REPO = 'git://github.com/crushlovely/Amaro.git'
+    BOOTSTRAP_REPO = 'git://github.com/appunite/Amaro.git'
     DEFAULT_BOOTSTRAP_BRANCH = 'master'
-    BOOTSTRAP_WEBSITE = 'https://github.com/crushlovely/Amaro'
+    BOOTSTRAP_WEBSITE = 'https://github.com/appunite/Amaro'
 
     attr_accessor :options
 

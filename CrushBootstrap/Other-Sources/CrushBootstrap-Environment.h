@@ -3,7 +3,7 @@
 //  CrushBootstrap
 //
 //  Created by Tim Clem on 4/2/14.
-//  Copyright (c) 2014 Crush & Lovely. All rights reserved.
+//  Copyright (c) 2014 AppUnite.com. All rights reserved.
 //
 
 // Defines about installed Pods

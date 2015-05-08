@@ -345,7 +345,7 @@
 			attributes = {
 				CLASSPREFIX = CRBS;
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Crush & Lovely";
+				ORGANIZATIONNAME = AppUnite.com;
 				TargetAttributes = {
 					BDDB997218C3943B003EBC42 = {
 						TestTargetID = BDDB994E18C3943B003EBC42;
