@@ -17,8 +17,6 @@
 		BD6951CF18EA4B0800F2F410 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6951CE18EA4B0800F2F410 /* main.m */; };
 		BD6951ED18EA54BB00F2F410 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6951EB18EA54BB00F2F410 /* Main_iPad.storyboard */; };
 		BD6951EE18EA54BB00F2F410 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6951EC18EA54BB00F2F410 /* Main_iPhone.storyboard */; };
-		BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = BD934CD119C211F600B48551 /* AssetCatalogIdentifiers.m */; };
-		BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = BD934CD319C211F600B48551 /* StoryboardIdentifiers.m */; };
 		BDDB996318C3943B003EBC42 /* CRBSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDB996218C3943B003EBC42 /* CRBSAppDelegate.m */; };
 		BDDB996C18C3943B003EBC42 /* CRBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDB996B18C3943B003EBC42 /* CRBSViewController.m */; };
 		BDDB996E18C3943B003EBC42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDB996D18C3943B003EBC42 /* Images.xcassets */; };
@@ -86,10 +84,6 @@
 		BD6951EA18EA54A800F2F410 /* CrushBootstrap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrushBootstrap-Info.plist"; sourceTree = "<group>"; };
 		BD6951EB18EA54BB00F2F410 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		BD6951EC18EA54BB00F2F410 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
-		BD934CD019C211F600B48551 /* AssetCatalogIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCatalogIdentifiers.h; sourceTree = "<group>"; };
-		BD934CD119C211F600B48551 /* AssetCatalogIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetCatalogIdentifiers.m; sourceTree = "<group>"; };
-		BD934CD219C211F600B48551 /* StoryboardIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryboardIdentifiers.h; sourceTree = "<group>"; };
-		BD934CD319C211F600B48551 /* StoryboardIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardIdentifiers.m; sourceTree = "<group>"; };
 		BD9FFD9418E66DF4001DF6EC /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		BDD81EE419DB5FCB00E45AC2 /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = "<group>"; };
 		BDDB994F18C3943B003EBC42 /* CrushBootstrap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrushBootstrap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,7 +171,6 @@
 		BD574AFC18EA481500EDD66F /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BD934CCF19C211F600B48551 /* Generated */,
 				BD35136419BE274A00A19841 /* CRBSConstants.h */,
 				BD35136519BE274A00A19841 /* CRBSConstants.m */,
 				BD6951EA18EA54A800F2F410 /* CrushBootstrap-Info.plist */,
@@ -199,17 +192,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		BD934CCF19C211F600B48551 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				BD934CD019C211F600B48551 /* AssetCatalogIdentifiers.h */,
-				BD934CD119C211F600B48551 /* AssetCatalogIdentifiers.m */,
-				BD934CD219C211F600B48551 /* StoryboardIdentifiers.h */,
-				BD934CD319C211F600B48551 /* StoryboardIdentifiers.m */,
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 		BDB71B2518EA46ED00579B97 /* Application */ = {
@@ -316,8 +298,6 @@
 			buildConfigurationList = BDDB998418C3943B003EBC42 /* Build configuration list for PBXNativeTarget "CrushBootstrap" */;
 			buildPhases = (
 				CE78B447D2424EDEAEAB74EB /* Check Pods Manifest.lock */,
-				BDF4202019B8F31200FE6C13 /* Generate Storyboard Identifier File */,
-				BD79800C19C0CF3E0087DCCA /* Generate Asset Catalog Identifier File */,
 				BDDB994B18C3943B003EBC42 /* Sources */,
 				BDDB994C18C3943B003EBC42 /* Frameworks */,
 				BD36522718CE89C6009107A7 /* Increment Build Number */,
@@ -489,21 +469,6 @@
 			shellScript = "# This script increments the build number (CFBundleVersion in the Info.plist)\n# on Ad-Hoc or Distribution builds that target real devices.\n# In the context of Amaro, that means an archive build of any scheme, or any\n# non-simulator build of the AppStore scheme.\n\n# Feel free to remove this build phase if that is not desired behavior for you.\n\n\"${SRCROOT}/Scripts/IncrementBuildNumber.py\"";
 			showEnvVarsInLog = 0;
 		};
-		BD79800C19C0CF3E0087DCCA /* Generate Asset Catalog Identifier File */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Asset Catalog Identifier File";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script walks the asset catalogs in your project and creates\n# AssetCatalogIdentifiers.{h,m} with methods for all the UIImages\n# found therein.\n# The generated files live in the Other Sources group.\n\n# If this is not desired behavior for you, or you don't use\n# asset catalogs, feel free to remove this build phase and the\n# generated files in Other Sources.\n\n\"${SRCROOT}/Scripts/GenerateAssetCatalogIDs.py\"";
-			showEnvVarsInLog = 0;
-		};
 		BDC7F36218EBA5EE0045D4BD /* Remove Unused Localizations */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,21 +499,6 @@
 			shellScript = "# If you have installed the Crashlytics pod, this script runs the required\n# setup script. If you didn't set up Crashlytics in the bootstrap script,\n# you will need to insert your API key below, as well as in the AppDelegate.\n# You can retrieve that key by running this command in Terminal:\n# ruby -e \"$(curl -fsSL https://raw.github.com/crushlovely/Amaro/master/tiramisu)\" -- --crashlytics\n\n# If you didn't install the CrashlyticsFramework pod, this script will do nothing.\n# Feel free to remove it in that case, if you wish.\n\nCRASHLYTICS_SCRIPT=\"./Pods/CrashlyticsFramework/Crashlytics.framework/run\"\n[ -x \"$CRASHLYTICS_SCRIPT\" ] || exit 0\n\n# Enter your key below:\nCRASHLYTICS_API_KEY=\"((CrashlyticsAPIKey))\"\n\nif [ \"${CRASHLYTICS_API_KEY:0:1}\" = \"(\" ]; then\n  echo \"warning: Set your Crashlytics API key in the Build Phases tab to enable Crashlytics integration\" 1>&2\n  exit 0\nfi\n\n\"$CRASHLYTICS_SCRIPT\" \"$CRASHLYTICS_API_KEY\"";
 			showEnvVarsInLog = 0;
 		};
-		BDF4202019B8F31200FE6C13 /* Generate Storyboard Identifier File */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Storyboard Identifier File";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script walks the storyboards in your project and creates\n# StoryboardIdentifiers.{h,m} with constants for all the segue,\n# reuse, restoration, and storyboard identifiers.\n# The generated files live in the Other Sources group.\n\n# If this is not desired behavior for you, or you don't use\n# storyboards, feel free to remove this build phase and the\n# generated files in Other Sources.\n\n# If you would like constants generated for restoration IDs,\n# uncomment this line:\n#export NEED_RESTORATION_IDS=1\n\n\"${SRCROOT}/Scripts/GenerateStoryboardIDs.py\"";
-			showEnvVarsInLog = 0;
-		};
 		CE78B447D2424EDEAEAB74EB /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -573,8 +523,6 @@
 			files = (
 				BD35136619BE274A00A19841 /* CRBSConstants.m in Sources */,
 				BDDB996318C3943B003EBC42 /* CRBSAppDelegate.m in Sources */,
-				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
-				BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */,
 				BD6951CF18EA4B0800F2F410 /* main.m in Sources */,
 				BDDB996C18C3943B003EBC42 /* CRBSViewController.m in Sources */,
 			);
