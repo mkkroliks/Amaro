@@ -2,3 +2,6 @@
 	path = External/xcconfigs
 	url = git://github.com/jspahrsummers/xcconfigs.git
 	branch = master
+[submodule "Certificates/AppUnite"]
+	path = Certificates/AppUnite
+	url = git@git.appunite.com:appunite/ios-certificates.git

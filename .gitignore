@@ -18,6 +18,7 @@ profile
 DerivedData
 *.hmap
 *.ipa
+*.p12
 
 # CocoaPods
 Pods
