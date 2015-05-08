@@ -311,6 +311,7 @@
 				BDF1758318C3A844008BD9C6 /* Fabric Script */,
 				BDC7F36218EBA5EE0045D4BD /* Remove Unused Localizations */,
 				BD35136319BE21BD00A19841 /* Badge App Icons */,
+				209436D51AFCD56D004FC6DB /* git hash */,
 			);
 			buildRules = (
 				BD3D80F418E8B70200FAD1EB /* PBXBuildRule */,
@@ -398,6 +399,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		209436D51AFCD56D004FC6DB /* git hash */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "git hash";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Scripts/xcode-git-hash.sh\"";
+		};
 		295A078AF08D45C99B314B81 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

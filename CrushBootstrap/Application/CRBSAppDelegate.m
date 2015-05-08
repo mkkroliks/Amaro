@@ -15,6 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initializeLoggingAndServices];
+    [self updateApplicationsSettings];
     
     // Override point for customization after application launch.
     return YES;
@@ -47,6 +48,20 @@
 
 - (void)initializeLoggingAndServices {
 //    [Crashlytics startWithAPIKey:CRBSFabricAPIKey];
+}
+
+- (void)updateApplicationsSettings {
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [[NSUserDefaults standardUserDefaults] setObject:version
+                                              forKey:@"version_preference"];
+    
+    NSString *build = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+    [[NSUserDefaults standardUserDefaults] setObject:build
+                                              forKey:@"build_preference"];
+    
+    NSString *githash = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GITHash"];
+    [[NSUserDefaults standardUserDefaults] setObject:githash
+                                              forKey:@"githash_preference"];
 }
 
 @end
