@@ -9,6 +9,7 @@
 #import "CRBSAppDelegate.h"
 
 //Frameworks
+#import <Fabric/Fabric.h>
 #import <Fabric/Crashlytics.h>
 
 @implementation CRBSAppDelegate
@@ -47,7 +48,7 @@
 #pragma mark Private
 
 - (void)initializeLoggingAndServices {
-//    [Crashlytics startWithAPIKey:CRBSFabricAPIKey];
+    [Fabric with:@[CrashlyticsKit]];
 }
 
 - (void)updateApplicationsSettings {
